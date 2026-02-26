@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIZ APP – SPORTS & ART EDITION</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a0a1f;
+      color: #e0e0ff;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 { text-align: center; color: #00ffea; text-shadow: 0 0 10px #00ffea; }
+    .subtitle { text-align: center; color: #aaa; margin-bottom: 30px; }
+    .question {
+      background: #1a1a3a;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      border-left: 6px solid #ff00aa;
+      box-shadow: 0 4px 15px rgba(255,0,170,0.2);
+    }
+    .question h3 {
+      margin-top: 0;
+      color: #00ffea;
+    }
+    label {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    button {
+      display: block;
+      margin: 40px auto;
+      padding: 16px 60px;
+      font-size: 1.5rem;
+      background: #ff00aa;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff00aa;
+    }
+    button:hover { background: #cc0088; }
+    #result {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-top: 40px;
+      padding: 25px;
+      border-radius: 12px;
+      display: none;
+    }
+    .legend { color: #00ffea; font-weight: bold; }
+    .correct   { background: #1e7e34; }
+    .medium    { background: #f57c00; }
+    .fail      { background: #c62828; }
+  </style>
+</head>
+<body>
+
+<h1>SPORTS & ART QUIZ</h1>
+<p class="subtitle">TRY YOUR SKILSS</p>
+
+<div class="question">
+  <h3>1. In soccer, which player can legally use their hands (most of the time)?</h3>
+  <label><input type="radio" name="q1" value="a"> Striker – to score epic goals</label>
+  <label><input type="radio" name="q1" value="b"> Goalkeeper – only in their box</label>
+  <label><input type="radio" name="q1" value="c"> Referee – to show yellow cards</label>
+  <label><input type="radio" name="q1" value="d"> Coach – to throw water bottles</label>
+</div>
+
+<div class="question">
+  <h3>2. What does "love" mean in tennis scoring?</h3>
+  <label><input type="radio" name="q2" value="a"> Zero points (so romantic)</label>
+  <label><input type="radio" name="q2" value="b"> 15 points</label>
+  <label><input type="radio" name="q2" value="c"> Game over, you win love</label>
+  <label><input type="radio" name="q2" value="d"> The ball is in love with the net</label>
+</div>
+
+<div class="question">
+  <h3>3. Who painted the "Mona Lisa"?</h3>
+  <label><input type="radio" name="q3" value="a"> Vincent van Gogh</label>
+  <label><input type="radio" name="q3" value="b"> Leonardo da Vinci</label>
+  <label><input type="radio" name="q3" value="c"> Pablo Picasso</label>
+  <label><input type="radio" name="q3" value="d"> Banksy (secretly)</label>
+</div>
+
+<div class="question">
+  <h3>4. How many players are on a standard basketball team on the court?</h3>
+  <label><input type="radio" name="q4" value="a"> 5</label>
+  <label><input type="radio" name="q4" value="b"> 6 (including the bench warmer)</label>
+  <label><input type="radio" name="q4" value="c"> 11 like soccer</label>
+  <label><input type="radio" name="q4" value="d"> 1 – if you're LeBron</label>
+</div>
+
+<div class="question">
+  <h3>5. Which famous painting has melting clocks?</h3>
+  <label><input type="radio" name="q5" value="a"> The Persistence of Memory – Salvador Dalí</label>
+  <label><input type="radio" name="q5" value="b"> Starry Night – Van Gogh</label>
+  <label><input type="radio" name="q5" value="c"> The Scream – Munch</label>
+  <label><input type="radio" name="q5" value="d"> My alarm clock every morning</label>
+</div>
+
+<div class="question">
+  <h3>6. In which sport would you perform a "slam dunk"?</h3>
+  <label><input type="radio" name="q6" value="a"> Basketball</label>
+  <label><input type="radio" name="q6" value="b"> Volleyball (sometimes)</label>
+  <label><input type="radio" name="q6" value="c"> Tennis (if you're angry)</label>
+  <label><input type="radio" name="q6" value="d"> Art – dunking paint on canvas</label>
+</div>
+
+<div class="question">
+  <h3>7. Who painted "Starry Night"?</h3>
+  <label><input type="radio" name="q7" value="a"> Claude Monet</label>
+  <label><input type="radio" name="q7" value="b"> Vincent van Gogh</label>
+  <label><input type="radio" name="q7" value="c"> Michelangelo</label>
+  <label><input type="radio" name="q7" value="d"> That one guy who stares at stars</label>
+</div>
+
+<div class="question">
+  <h3>8. What is the maximum score for a single frame in bowling (perfect game per frame)?</h3>
+  <label><input type="radio" name="q8" value="a"> 300 for the whole game, but 30 per frame max</label>
+  <label><input type="radio" name="q8" value="b"> 300</label>
+  <label><input type="radio" name="q8" value="c"> 10</label>
+  <label><input type="radio" name="q8" value="d"> Infinity if you never miss</label>
+</div>
+
+<div class="question">
+  <h3>9. What art movement is famous for bright, wild colors (like Fauvism)?</h3>
+  <label><input type="radio" name="q9" value="a"> Impressionism</label>
+  <label><input type="radio" name="q9" value="b"> Fauvism – "wild beasts"</label>
+  <label><input type="radio" name="q9" value="c"> Cubism</label>
+  <label><input type="radio" name="q9" value="d"> My outfit on Fridays</label>
+</div>
+
+<div class="question">
+  <h3>10. Which country has won the most FIFA World Cups (as of 2026)?</h3>
+  <label><input type="radio" name="q10" value="a"> Germany</label>
+  <label><input type="radio" name="q10" value="b"> Brazil</label>
+  <label><input type="radio" name="q10" value="c"> Italy</label>
+  <label><input type="radio" name="q10" value="d"> Argentina (recently catching up)</label>
+</div>
+
+<div class="question">
+  <h3>11. Who sculpted "David"?</h3>
+  <label><input type="radio" name="q11" value="a"> Donatello</label>
+  <label><input type="radio" name="q11" value="b"> Michelangelo</label>
+  <label><input type="radio" name="q11" value="c"> Bernini</label>
+  <label><input type="radio" name="q11" value="d"> The guy who skips leg day</label>
+</div>
+
+<div class="question">
+  <h3>12. In golf, what is a "hole-in-one" also called?</h3>
+  <label><input type="radio" name="q12" value="a"> Ace</label>
+  <label><input type="radio" name="q12" value="b"> Eagle</label>
+  <label><input type="radio" name="q12" value="c"> Birdie</label>
+  <label><input type="radio" name="q12" value="d"> Lucky shot, bro</label>
+</div>
+
+<div class="question">
+  <h3>13. "The Scream" was painted by whom?</h3>
+  <label><input type="radio" name="q13" value="a"> Edvard Munch</label>
+  <label><input type="radio" name="q13" value="b"> Pablo Picasso</label>
+  <label><input type="radio" name="q13" value="c"> Frida Kahlo</label>
+  <label><input type="radio" name="q13" value="d"> Me on Monday mornings</label>
+</div>
+
+<div class="question">
+  <h3>14. How many rings make up the Olympic symbol?</h3>
+  <label><input type="radio" name="q14" value="a"> 5</label>
+  <label><input type="radio" name="q14" value="b"> 7</label>
+  <label><input type="radio" name="q14" value="c"> 3</label>
+  <label><input type="radio" name="q14" value="d"> As many as you can hula</label>
+</div>
+
+<div class="question">
+  <h3>15. Which artist is known for "Campbell's Soup Cans"?</h3>
+  <label><input type="radio" name="q15" value="a"> Andy Warhol</label>
+  <label><input type="radio" name="q15" value="b"> Roy Lichtenstein</label>
+  <label><input type="radio" name="q15" value="c"> Jackson Pollock</label>
+  <label><input type="radio" name="q15" value="d"> Your mom’s pantry</label>
+</div>
+
+<div class="question">
+  <h3>16. What sport uses a shuttlecock?</h3>
+  <label><input type="radio" name="q16" value="a"> Badminton</label>
+  <label><input type="radio" name="q16" value="b"> Table tennis</label>
+  <label><input type="radio" name="q16" value="c"> Archery</label>
+  <label><input type="radio" name="q16" value="d"> Chicken fighting (jk)</label>
+</div>
+
+<div class="question">
+  <h3>17. "Guernica" is a famous anti-war painting by?</h3>
+  <label><input type="radio" name="q17" value="a"> Pablo Picasso</label>
+  <label><input type="radio" name="q17" value="b"> Francisco Goya</label>
+  <label><input type="radio" name="q17" value="c"> Salvador Dalí</label>
+  <label><input type="radio" name="q17" value="d"> War photographers</label>
+</div>
+
+<div class="question">
+  <h3>18. In which sport is the "Fosbury Flop" a famous technique?</h3>
+  <label><input type="radio" name="q18" value="a"> High jump</label>
+  <label><input type="radio" name="q18" value="b"> Pole vault</label>
+  <label><input type="radio" name="q18" value="c"> Diving</label>
+  <label><input type="radio" name="q18" value="d"> Flopping like soccer players</label>
+</div>
+
+<div class="question">
+  <h3>19. What is the name of Van Gogh's series with sunflowers?</h3>
+  <label><input type="radio" name="q19" value="a"> Sunflowers</label>
+  <label><input type="radio" name="q19" value="b"> Irises</label>
+  <label><input type="radio" name="q19" value="c"> Wheat Fields</label>
+  <label><input type="radio" name="q19" value="d"> My failed garden</label>
+</div>
+
+<div class="question">
+  <h3>20. Which of these is NOT an official Olympic sport (as of 2026)?</h3>
+  <label><input type="radio" name="q20" value="a"> Breakdancing</label>
+  <label><input type="radio" name="q20" value="b"> Surfing</label>
+  <label><input type="radio" name="q20" value="c"> Competitive eating</label>
+  <label><input type="radio" name="q20" value="d"> Skateboarding</label>
+</div>
+
+<button onclick="checkAnswers()">SUBMIT</button>
+
+<div id="result"></div>
+
+<script>
+function checkAnswers() {
+  const answers = {
+    q1: 'b',   // Goalkeeper
+    q2: 'a',   // Zero points
+    q3: 'b',   // Leonardo da Vinci
+    q4: 'a',   // 5
+    q5: 'a',   // Persistence of Memory
+    q6: 'a',   // Basketball
+    q7: 'b',   // Van Gogh
+    q8: 'a',   // Ace (hole-in-one)
+    q9: 'b',   // Fauvism
+    q10: 'b',  // Brazil
+    q11: 'b',  // Michelangelo
+    q12: 'a',  // Ace
+    q13: 'a',  // Edvard Munch
+    q14: 'a',  // 5
+    q15: 'a',  // Andy Warhol
+    q16: 'a',  // Badminton
+    q17: 'a',  // Picasso
+    q18: 'a',  // High jump
+    q19: 'a',  // Sunflowers
+    q20: 'c'   // Competitive eating
+  };
+
+  let score = 0;
+  const total = 20;
+
+  for (let i = 1; i <= total; i++) {
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected && selected.value === answers[`q${i}`]) {
+      score++;
+    }
+  }
+
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+
+  let message = "";
+  let className = "";
+
+  if (score >= 18) {
+    message = `ASSOME ${score}/${total}<br>
+    className = "correct";
+  } else if (score >= 13) {
+    message = `WOW ${score}/${total}<br>
+    className = "medium";
+  } else if (score >= 8) {
+    message = `Not bad ${score}/${total}<br>
+    className = "medium";
+  } else {
+    message = `BETTER LUCK NEXT TIME ${score}/${total}<br>
+    className = "fail";
+  }
+
+  resultDiv.innerHTML = message;
+  resultDiv.className = className;
+}
+</script>
+
+</body>
+</html>
